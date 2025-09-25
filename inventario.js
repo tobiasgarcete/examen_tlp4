@@ -1,14 +1,14 @@
-var InventarioViejo = /** @class */ (function () {
-    function InventarioViejo() {
+var InventarioAntiguo = /** @class */ (function () {
+    function InventarioAntiguo() {
         this.items = [];
     }
-    InventarioViejo.prototype.addItem = function (nombre) {
+    InventarioAntiguo.prototype.addItem = function (nombre) {
         this.items.push({ nombre: nombre });
     };
-    InventarioViejo.prototype.getItems = function () {
+    InventarioAntiguo.prototype.getItems = function () {
         return this.items;
     };
-    return InventarioViejo;
+    return InventarioAntiguo;
 }());
 var AdaptadorInventario = /** @class */ (function () {
     function AdaptadorInventario(inventarioViejo) {
@@ -24,7 +24,7 @@ var AdaptadorInventario = /** @class */ (function () {
     };
     return AdaptadorInventario;
 }());
-var inventarioViejo = new InventarioViejo();
+var inventarioViejo = new InventarioAntiguo();
 var adaptador = new AdaptadorInventario(inventarioViejo);
 adaptador.agregarEquipo("Router Cisco", "Red", "disponible");
 console.log(adaptador.listarEquipos());

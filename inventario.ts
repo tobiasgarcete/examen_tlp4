@@ -1,5 +1,5 @@
 
-class InventarioViejo {
+class InventarioAntiguo {
   items: { nombre: any }[];
   constructor() {
     this.items = [];
@@ -17,9 +17,9 @@ class InventarioViejo {
 
 
 class AdaptadorInventario {
-  inventarioViejo: InventarioViejo;
+  inventarioViejo: InventarioAntiguo;
   equipos: { nombre: string; tipo: string; estado: string }[];
-  constructor(inventarioViejo: InventarioViejo) {
+  constructor(inventarioViejo: InventarioAntiguo) {
     this.inventarioViejo = inventarioViejo;
     this.equipos = [];
   }
@@ -34,7 +34,7 @@ class AdaptadorInventario {
   }
 }
 
-const inventarioViejo = new InventarioViejo();
+const inventarioViejo = new InventarioAntiguo();
 const adaptador = new AdaptadorInventario(inventarioViejo);
 
 adaptador.agregarEquipo("Router Cisco", "Red", "disponible");
